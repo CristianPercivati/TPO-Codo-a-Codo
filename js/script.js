@@ -8,6 +8,7 @@ window.onscroll = function (){changeToFixed()};
 
 let header = document.querySelector("header");
 let navText = document.querySelector("#logo-title");
+let navCollapse = document.querySelector("#nav-hamb");
 
 function changeToFixed()
 {
@@ -16,12 +17,14 @@ if (document.documentElement.scrollTop > 0 && header.classList!="is-fixed")
     header.classList.toggle("is-fixed");
     navText.classList.toggle("is-inverted");
     navLinks.classList.toggle("is-inverted");
+    navCollapse.classList.toggle("is-inverted");
 }
 else if (document.documentElement.scrollTop < 1)
 {
     header.classList.toggle("is-fixed");
     navText.classList.toggle("is-inverted");
     navLinks.classList.toggle("is-inverted");
+    navCollapse.classList.toggle("is-inverted");
 }
 }
 
