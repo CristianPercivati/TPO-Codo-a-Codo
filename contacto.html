@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>TPO Codo a Codo</title>
+    <link rel="stylesheet" href="styles/styles.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Source+Sans+Pro:wght@400&display=swap"
+        rel="stylesheet">
+    <script src="https://kit.fontawesome.com/983afb2930.js" crossorigin="anonymous"></script>
+
+</head>
+
+<body>
+    <header>
+        <nav>
+            <img id="logo" src="img/logo.png">
+            <span id="logo-title">PRIMEROS EN LA CONQUISTA DEL BUEN GUSTO.</span>
+            <ul id="nav-links">
+                <li class="nav-item"><a class="nav-item" href="index.html">Novedades</a></li>
+                <li class="nav-item">Historia</li>
+                <li class="nav-item">Elaboración</li>
+                <li class="nav-item">Distribución</li>
+                <li class="nav-item">Catálogo</li>
+                <li class="nav-item">Carrito</li>
+                <li class="nav-item"><a class="nav-item" href="contacto.html">Contacto</a></li>
+            </ul>
+            <div class="nav-space"></div>
+            <div class="nav-collapse" onclick="toggleNav()"><img style="width: 25px;"
+                    src="http://assets.stickpng.com/images/588a64e7d06f6719692a2d11.png"></div>
+        </nav>
+
+    </header>
+    <main>
+
+        <section class="top-content">
+            <div class="container">
+                <div class="descripcion">
+                    <h2>Alfajores Capitán del Espacio</h2>
+                    <h1>Contacto</h1>
+
+
+                </div>
+            </div>
+        </section>
+        <section id="mid-content">
+            <div class="container">
+                <div class="card-large"><span class="card-large-title">Título</span>Lorem ipsum, dolor sit amet
+                    consectetur adipisicing elit. Ipsam voluptatibus corporis commodi accusamus id itaque necessitatibus
+                    alias dolore obcaecati optio assumenda vitae delectus est in, earum odit ut laboriosam reprehenderit
+                    quam quaerat. Odio dolore perferendis iure corporis unde ipsam perspiciatis quod sit, reprehenderit
+                    consectetur error, laudantium iste blanditiis, reiciendis eos!
+                    <form id="formulario_contacto" action="contacto.html">
+                        <div>
+                            <input id="form_name" type="text" placeholder="Nombre">
+                            <small></small>
+                        </div>
+                        <div>
+                            <input id="form_email" type="text" placeholder="Dirección de correo.">
+                            <small></small>
+                        </div>
+                        <div>
+                            <input id="form_tel" type="text" placeholder="Número de teléfono.">
+                            <small></small>
+                        </div>
+                        <div>
+                            <textarea id="form_consulta" placeholder="Por favor, escriba aquí su consulta."></textarea>
+                            <small></small>
+                        </div>
+                        <input type="submit" value="Enviar">
+                    </form>
+                </div>
+            </div>
+
+        </section>
+    </main>
+    <footer>
+        <span id="footer-logo"><img src="img/logo.png"></span>
+        <span id="social">
+            <i class="fa-brands fa-facebook fa-2xl"></i>
+            <i class="fa-brands fa-instagram fa-2xl"></i>
+            <i class="fa-brands fa-whatsapp fa-2xl"></i>
+        </span>
+        <div class="newsletter-container">
+            <div id="newsletter-title">¿Querés suscribirte?</div>
+            <div id="newsletter-text">Suscribite con tu email para estar al tanto períodicamente de las mejores
+                novedades.</div>
+            <form id="newsletter-form">
+                <input type="text" id="newsletter-email">
+                <input type="button" id="newsletter-button" value="Enviar">
+            </form>
+
+        </div>
+        <span id="copyright"> © 2022 <span style="color: red">Capitán del Espacio</span> -
+            www.capitandelespacio.com.ar</span>
+
+    </footer>
+
+</body>
+<script type="text/javascript" src="js/script.js">
+
+</script>
+
+</html>
