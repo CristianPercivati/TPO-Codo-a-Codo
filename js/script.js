@@ -31,6 +31,21 @@ else if (document.documentElement.scrollTop < 1)
 let idInput = (id) => document.getElementById(id);
 let form = idInput("formulario_contacto"), name = idInput("form_name"), tel = idInput("form_tel"), email = idInput("form_email"), message = idInput("form_consulta");
 let isFormValid = false;
+
+function debounce(callback, delay){
+let timer;
+return () => {
+    clearTimeout(timer);
+    timer = setTimeout(callback, delay);
+}
+}
+
+let isNameValid, isEmailValid, isTelValid, isMessageValid;
+
+name.addEventListener("input", debounce(() => isNameValid = validateForm(name, "isNameValid", "El campo nombre no es válido."), 1000));
+email.addEventListener("input", debounce(() => validateForm(email, "isEmailValid", "El campo email no es válido."), 1000));
+tel.addEventListener("input", debounce(() => validateForm(tel, "isTelValid", "El campo teléfono no es válido."), 1000));
+
 form.addEventListener("submit", (e) => {
 
     let isNameValid = validateForm(name, "isEmpty", "El campo nombre no puede estar vacío.");
