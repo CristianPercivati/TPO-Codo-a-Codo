@@ -1,4 +1,4 @@
-# TPO-Codo-a-Codo
+# TPO Codo a Codo
 Trabajo Práctico Obligatorio del curso Codo a Codo 2022
 
 Entrega del Trabajo Práctico Obligatorio requerido en el curso de Codo a Codo del Gobierno de la Ciudad de Buenos Aires, fullstack Python.
