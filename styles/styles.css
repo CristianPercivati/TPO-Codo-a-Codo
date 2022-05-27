@@ -276,7 +276,7 @@ color: red;
     align-items: center;
 }
 #mid-content .card-large{
-    max-width: 50%;
+    max-width: 85%;
 }
 footer{
     background-color: #1b4088;
@@ -385,6 +385,7 @@ footer #newsletter-email{
         border-radius: 5px;
         border-width: 0.15rem;
         max-height: 10rem;
+        resize: none;
         }
     
     #formulario_contacto .field-error{

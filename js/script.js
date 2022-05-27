@@ -32,8 +32,12 @@ let idInput = (id) => document.getElementById(id);
 let form = idInput("formulario_contacto"), name = idInput("form_name"), tel = idInput("form_tel"), email = idInput("form_email"), message = idInput("form_consulta");
 let isFormValid = false;
 form.addEventListener("submit", (e) => {
-    let isNameValid = validateForm(name, "isEmpty", "El campo nombre no puede estar vacío.");
 
+    let isNameValid = validateForm(name, "isEmpty", "El campo nombre no puede estar vacío.");
+    if (isNameValid===true)
+    {
+    isNameValid = validateForm(name, "isNameValid", "El campo nombre no es válido.");
+    }
     let isEmailValid = validateForm(email, "isEmpty", "El campo email no puede estar vacío.");
     if (isEmailValid===true)
     {
@@ -77,6 +81,15 @@ let isInputValid = false;
             isInputValid = false;
             }
         else{
+        isInputValid = true; 
+        }
+    }
+
+    if (check == "isNameValid"){        
+    if (id.value.match(/^[a-zA-Z]+$/)==null){
+        isInputValid = false;
+        }
+    else{
         isInputValid = true; 
         }
     }
