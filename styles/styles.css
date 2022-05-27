@@ -1,3 +1,4 @@
+@import url('https://fonts.googleapis.com/css2?family=Bree+Serif&display=swap');
 body{
     margin: 0;
     font-family: 'Bebas Neue', cursive;
@@ -19,6 +20,7 @@ header{
     right: 0;
     padding-bottom: 0.5rem;
     transition: background-color 0.5s;
+    z-index: 999;
 }
 nav{
     display: flex;
@@ -178,12 +180,12 @@ align-items:flex-start;
     padding:3rem;   
     margin-top:20px; 
     color:#1b4088;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Bree Serif', serif;
     font-size: 1.2em;
     display: flex;
     flex-direction: column;
     align-items: center;
-    row-gap: 10px;
+    row-gap: 2em;
 
 }
 .card-large-title{
@@ -191,6 +193,7 @@ align-items:flex-start;
     font-size: 2em;
     font-weight: bold; 
     text-transform:uppercase;
+    text-align: center;
 }
 .small-info{
     display: flex;
@@ -207,25 +210,58 @@ align-items:flex-start;
     padding:15px;   
     margin-top:20px; 
     color:#1b4088;
-    font-family: 'Source Sans Pro', sans-serif;
+    font-family: 'Bree Serif', serif;
     font-size: 1.2em;
     display:flex;
+}
+
+.card-small-image{
+    max-width: 75%;
+}
+.card-small input{
+    background-color: transparent;
+    border-style: solid;
+    border-width: 2px;
+    border-color:#1b4088;
+    border-radius: 10px;
+    color:#1b4088;
+    padding: 5px;
+    margin-left: 1rem;
+    width: 25%;
+}
+.card-small input[type="button"]{
+    margin-left: 1em;
+    border-color:#1b4088;
+    background-color: transparent;
+    color: #1b4088;
+    text-align: center;
+    font-weight: bold;
+    border-radius: 5px;
+    border-width: 0.15rem;
+    width: auto;
+}
+.card-small input[type="button"]:hover{
+    border-color:red;
+    color: red;
 }
 
 .card-small .card-header-title{
 font-size: 1.4em;
 font-weight: bold;
 color: #1b4088;
+text-align: center;
+
 }
-.card-small .card-content{
+.card-content{
     display:flex;
     flex-direction: column;
+    row-gap: 2rem;
 }
-.card-small .card-header-logo{
+.card-header-logo{
     padding-right: 25px;
     }
 
-.card-small .card-header-logo i{
+.card-header-logo i{
 color: red;
     }
 
@@ -389,6 +425,20 @@ display:none;
     font-family: 'Source Sans Pro', sans-serif;
     font-weight: bolder;
 }
+
+.map-responsive{
+    min-width: 100%;
+    min-height: 25vw;
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+}
+.map-responsive iframe{
+
+    min-height:100%;
+    max-width:100%;
+
+}
 }
 
 @media only screen and (min-width: 469px) {
@@ -422,10 +472,16 @@ display:none;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 1.2em;
     }
+#mid-content .container{
+    width: 100%;
+}    
     .small-info{
         display: flex;
         flex-direction: row;
         margin-top: -80px;
+        flex-wrap: wrap;
+        column-gap: 1em;
+        width: 100%;
     }
     .card-small{
         background-color:white;
@@ -437,12 +493,13 @@ display:none;
         font-family: 'Source Sans Pro', sans-serif;
         font-size: 1.2em;
         transition: transform 1s;
-        margin-left: 10px;
-        margin-right: 10px;
         display: flex;
         flex-direction: column;
         align-items: center;
         row-gap: 1em;
+        min-width: 18%;
+        max-width: 28%;
+        flex: 1 1 0;
     }
     .card-small:hover{
         transform: translateY(-20px);
@@ -453,6 +510,7 @@ display:none;
         }
         .card-small .card-content{
             align-items: center;
+            row-gap: 2rem;
         }
         .card-small .card-header-logo{
             padding-top: 10px;
