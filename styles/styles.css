@@ -99,6 +99,8 @@ order: 4;
     height: 3rem;
     color: #1b4088;
     text-decoration: none;
+    display: inline-block;
+    min-width: 100%
 }
 .nav-item:hover{
     color: red;
@@ -628,6 +630,8 @@ display:none;
 
         }
         .nav-item{
+            display: block;
             color: white;
+            min-width: auto;
         }
     }
