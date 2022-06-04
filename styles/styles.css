@@ -629,6 +629,11 @@ display:none;
             transition: color 0.5s;
 
         }
+        #nav-links.is-inverted .nav-item:hover
+        {
+            color: red;
+            transition: color 0.5s;
+        }
         .nav-item{
             display: block;
             color: white;
