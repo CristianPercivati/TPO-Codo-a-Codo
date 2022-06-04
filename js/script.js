@@ -3,7 +3,7 @@ let navLinks = document.querySelector("#nav-links");
 
 // activa o desactiva el menú del navbar en dispositivos móviles
 function toggleNav() {
-navLinks.classList.toggle("links-show");
+  navLinks.classList.toggle("links-show");
 }
 
 // si existe desplazamiento, cambiamos el navbar a fixed
@@ -22,13 +22,12 @@ if (document.documentElement.scrollTop > 0 && header.classList!="is-fixed")
     navText.classList.toggle("is-inverted");
     navLinks.classList.toggle("is-inverted");
     navCollapse.classList.toggle("is-inverted");
-}
-else if (document.documentElement.scrollTop < 1)
-{
+  } else if (document.documentElement.scrollTop < 1) {
     header.classList.toggle("is-fixed");
     navText.classList.toggle("is-inverted");
     navLinks.classList.toggle("is-inverted");
     navCollapse.classList.toggle("is-inverted");
+  }
 }
 }
 /* fin del funcionamiento del navbar*/
@@ -68,7 +67,9 @@ name.addEventListener("input", debounce(() => isNameValid = validateForm(name, "
 email.addEventListener("input", debounce(() => isEmailValid = validateForm(email, "isEmailValid", "El campo email no es válido."), 1000));
 tel.addEventListener("input", debounce(() => isTelValid = validateForm(tel, "isTelValid", "El campo teléfono no es válido."), 1000));
 
-form.addEventListener("submit", (e) => {
+  // vinculamos los eventos a su correspondiente función dentro de debounce. En este caso
+  // callback llama a validateForm, el cual regresa true o false para ser asignada a la
+  // variable de estado de cada input.
 
     // Volvemos a generar las comprobaciones en caso de que se apriete el botón de envío.
     // primero que el input no esté vacío.
@@ -123,6 +124,7 @@ let isInputValid = false;
             isInputValid = true;
         }
     }
+  });
 
     // si el campo teléfono es válido o no...
     if (check == "isTelValid"){
@@ -137,13 +139,17 @@ let isInputValid = false;
         }
     }
 
-    if (check == "isNameValid"){        
-    if (id.value.match(/^[a-zA-Z]+$/)==null){
+  let validateForm = (id, check, message) => {
+    let error = id.parentElement.querySelector("small");
+    let isInputValid = false;
+    // si está vacío...
+    if (check == "isEmpty") {
+      if (id.value.trim() === "") {
+        // este campo es inválido
         isInputValid = false;
-        }
-    else{
-        isInputValid = true; 
-        }
+      } else {
+        isInputValid = true;
+      }
     }
     
     if (check == "isEmailValid"){
